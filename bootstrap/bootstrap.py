@@ -237,6 +237,8 @@ def main():
     install_prefix = os.environ.get('TLJH_INSTALL_PREFIX', '/opt/tljh')
     hub_prefix = os.path.join(install_prefix, 'hub')
 
+    python_bootstrap = os.environ.get('TLJH_PYTHON_EXECUTABLE', 'python3')
+
     # Set up logging to print to a file and to stderr
     os.makedirs(install_prefix, exist_ok=True)
     file_logger_path = os.path.join(install_prefix, 'installer.log')
@@ -279,7 +281,7 @@ def main():
         ])
         logger.info('Installed python & virtual environment')
         os.makedirs(hub_prefix, exist_ok=True)
-        run_subprocess(['python3', '-m', 'venv', hub_prefix])
+        run_subprocess([python_bootstrap, '-m', 'venv', hub_prefix])
         logger.info('Set up hub virtual environment')
 
     if initial_setup:

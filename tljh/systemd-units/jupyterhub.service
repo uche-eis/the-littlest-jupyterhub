@@ -11,7 +11,7 @@ Restart=always
 WorkingDirectory={install_prefix}/state
 # Protect bits that are normally shared across the system
 PrivateTmp=yes
-PrivateDevices=yes
+# PrivateDevices=yes
 ProtectKernelTunables=yes
 ProtectKernelModules=yes
 Environment=TLJH_INSTALL_PREFIX={install_prefix}

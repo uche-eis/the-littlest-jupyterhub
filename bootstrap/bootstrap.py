@@ -281,7 +281,7 @@ def main():
         ])
         logger.info('Installed python & virtual environment')
         os.makedirs(hub_prefix, exist_ok=True)
-        run_subprocess([python_bootstrap, '-m', 'venv', hub_prefix])
+        run_subprocess([python_bootstrap, '-m', 'venv', '--copies', hub_prefix])
         logger.info('Set up hub virtual environment')
 
     if initial_setup:

@@ -43,8 +43,11 @@ might still make breaking changes that have no clear upgrade pathway.
 Installation
 ============
 
-The Littlest JupyterHub (TLJH) can run on any server that is running at least
-**Ubuntu 18.04**. Earlier versions of Ubuntu are not supported.
+The Littlest JupyterHub (TLJH) requires at least Python 3.6. This fork allows you
+to specify your Python install. If you're running Ubuntu prior to 18.04 you'll
+have to install a more up-to-date Python and set its executable path in the
+environment as TLJH_PYTHON_EXECUTABLE.
+
 We have several tutorials to get you started.
 
 - Tutorials to create a new server from scratch on a cloud provider & run TLJH
